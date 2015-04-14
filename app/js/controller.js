@@ -1,6 +1,6 @@
 'use strict';
 
-var store = angular.module('store',['ngRoute'])
+var store = angular.module('store',['ngRoute','webcam'])
   .controller('StoreListCtrl', function($scope, $http, $route, $routeParams, $sce, $timeout) {
 
   $scope.LargeCards_flag = false;
@@ -30,6 +30,7 @@ var store = angular.module('store',['ngRoute'])
   // to avoid flashing during page loading
   $scope.init = function () {
     $("#list_container").fadeIn(1000);
+    $("#scan_top").fadeIn(1000);
   };
 
   // change to large cards
@@ -65,70 +66,53 @@ var store = angular.module('store',['ngRoute'])
 
   $scope.full_edit = function() {
     $scope.full_screen_edit = true;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = false;
-    $("#full_screen_overlay").fadeIn(400);
-  }
-
-  $scope.full_camera = function() {
-    $scope.full_screen_edit = false;
-    $scope.full_screen_camera = true;
-    $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = false;
+    $scope.full_screen_precise = false;
     $("#full_screen_overlay").fadeIn(400);
   }
 
   $scope.full_vendor = function() {
     $scope.full_screen_edit = false;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = true;
-    $scope.full_screen_packaging = false;
+    $scope.full_screen_precise = false;
     $("#full_screen_overlay").fadeIn(400);
   }
 
-  $scope.full_packaging = function() {
+  $scope.full_precise = function() {
     $scope.full_screen_edit = false;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = true;
+    $scope.full_screen_precise = true;
     $("#full_screen_overlay").fadeIn(400);
   }
 
   $scope.switch_to_edit = function () {
     $scope.full_screen_edit = true;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = false;
-  }
-
-  $scope.switch_to_camera = function () {
-    $scope.full_screen_edit = false;
-    $scope.full_screen_camera = true;
-    $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = false;
+    $scope.full_screen_precise = false;
   }
 
   $scope.switch_to_vendor = function () {
     $scope.full_screen_edit = false;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = true;
-    $scope.full_screen_packaging = false;
+    $scope.full_screen_precise = false;
   }
 
-  $scope.switch_to_packaging = function () {
+  $scope.switch_to_precise = function () {
     $scope.full_screen_edit = false;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = true;
+    $scope.full_screen_precise = true;
   }    
 
   $scope.close_full_screen = function() {
     $("#full_screen_overlay").hide();
+    $("#barcode_scanner").hide();
     $scope.full_screen_edit = false;
-    $scope.full_screen_camera = false;
     $scope.full_screen_vendor = false;
-    $scope.full_screen_packaging = false;
+    $scope.full_screen_precise = false;
+  }
+
+  $scope.scanner = function() {
+    $("#barcode_scanner").fadeIn(400);
   }
 
 /*
