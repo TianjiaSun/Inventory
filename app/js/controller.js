@@ -1,6 +1,6 @@
 'use strict';
 
-var store = angular.module('store',['ngRoute'])
+var store = angular.module('store',['ngRoute','webcam'])
   .controller('StoreListCtrl', function($scope, $http, $route, $routeParams, $sce, $timeout) {
 
   $scope.LargeCards_flag = false;
@@ -106,7 +106,6 @@ var store = angular.module('store',['ngRoute'])
   $scope.close_full_screen = function() {
     $("#full_screen_overlay").hide();
     $("#barcode_scanner").hide();
-    $scope.$broadcast('STOP_WEBCAM');
     $scope.full_screen_edit = false;
     $scope.full_screen_vendor = false;
     $scope.full_screen_precise = false;
@@ -114,7 +113,6 @@ var store = angular.module('store',['ngRoute'])
 
   $scope.scanner = function() {
     $("#barcode_scanner").fadeIn(400);
-    $scope.$broadcast('START_WEBCAM');
   }
 
 })
