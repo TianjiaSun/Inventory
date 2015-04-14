@@ -155,11 +155,7 @@
   <div id="barcode_scanner" hidden>
       <div class="full_screen_product">
         <img class="close_full_screen" src="img/close_full_screen.png" ng-click="close_full_screen()"/>
-        <webcam class="full_size"
-          on-stream="onStream(stream)"
-          on-streaming="onSuccess()"
-          on-error="onError(err)">
-        </webcam>
+        <webcam></webcam>
 <!--         <div class="product_edge">
           <div class="product_content_large_cards">
             <img class="scan_img" src="img/scan_img.jpg"/>

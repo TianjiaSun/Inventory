@@ -1582,7 +1582,7 @@ position: relative;
   height: 100%;
 }
 
-.full_size {
+.webcam-live {
   position: absolute;
   top: 0px;
   left: 0px;
