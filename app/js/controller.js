@@ -1,7 +1,7 @@
 'use strict';
 
 var store = angular.module('store',['ngRoute','webcam'])
-  .controller('StoreListCtrl', function($scope, $http, $route, $routeParams, $sce, $timeout) {
+  .controller('StoreListCtrl', function($scope, $http, $route, $routeParams, $sce, $timeout, $emit) {
 
   $scope.LargeCards_flag = false;
   $scope.MediumCards_flag = true;
@@ -113,6 +113,7 @@ var store = angular.module('store',['ngRoute','webcam'])
 
   $scope.scanner = function() {
     $("#barcode_scanner").fadeIn(400);
+    $scope.$emit('START_WEBCAM');
   }
 
 })
