@@ -1574,6 +1574,19 @@ position: relative;
   background: rgba(0,0,0,0.5);
 }
 
+.full_screen_camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vh;
+  min-width: 440px;
+  height: 75vh;
+  min-height: 440px;
+  z-index: 102;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 12px black;
+}
+
 .scan_img {
   position: absolute;
   top: 0px;
