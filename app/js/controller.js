@@ -106,7 +106,7 @@ var store = angular.module('store',['ngRoute','webcam'])
   $scope.close_full_screen = function() {
     $("#full_screen_overlay").hide();
     $("#barcode_scanner").hide();
-    $rootScope.$broadcast('STOP_WEBCAM');
+    $scope.$broadcast('STOP_WEBCAM');
     $scope.full_screen_edit = false;
     $scope.full_screen_vendor = false;
     $scope.full_screen_precise = false;
@@ -114,7 +114,8 @@ var store = angular.module('store',['ngRoute','webcam'])
 
   $scope.scanner = function() {
     $("#barcode_scanner").fadeIn(400);
-    $rootScope.$broadcast('START_WEBCAM');
+    $scope.$broadcast('START_WEBCAM');
+    alert("start");
   }
 
 })
