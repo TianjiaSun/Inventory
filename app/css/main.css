@@ -494,10 +494,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc6db3f2', e
   font-size: 26px;
   color: white;
   z-index: 12;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 .inventory_count:hover {
@@ -531,11 +527,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc6db3f2', e
   -o-transform: scale(1) rotate(30deg);
   -ms-transform: scale(1) rotate(30deg);
   transform: scale(1) rotate(30deg);
-
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 .inventory_count_with_prediction:hover {
@@ -1247,7 +1238,19 @@ position: absolute;
 }
 
 .hover_content_title {
-  position: absolute;
+  position: relative;
+  top: 0.7vw;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  font-family: arial;
+  font-size: 130%;
+  font-weight: bold;
+  color: white;
+}
+
+.hover_content_title_underline {
+  position: relative;
   top: 0.7vw;
   left: 10%;
   width: 80%;
@@ -1261,14 +1264,88 @@ position: absolute;
   border-color: white;
 }
 
-.add_link_GAUSIAN_logo {
+.hover_content_product_name {
+  position: relative;
+  top: 0.7vw;
+  left: 0%;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  font-family: arial;
+  font-size: 115%;
+  font-weight: bold;
+  color: white;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.one_record {
+  position: relative;
+  top: 1.1vw;
+  left: 10%;
+  width: 80%;
+  height: 2.3vh;
+  text-align: left;
+  font-family: arial;
+  font-size: 115%;
+  color: white;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  background: transparent;
+}
+
+.one_record_large {
+  position: relative;
+  top: 1.1vw;
+  left: 10%;
+  width: 80%;
+  height: 2.6vh;
+  text-align: left;
+  font-family: arial;
+  font-size: 120%;
+  color: white;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  background: transparent;
+}
+
+.time_column {
   position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 90%;
+}
+
+.count_column {
+  position: absolute;
+  float: right;
+  right: 0px;
+}
+
+.add_link_GAUSIAN_logo {
+  position: relative;
   top: 25%;
   left: 25%;
   width: 50%;
   height: 50%;
 }
 
+.one_record:hover .time_column{
+  color: black;
+}
+
+.one_record:hover .count_column{
+  color: black;
+}
+
+.one_record_large:hover .time_column{
+  color: black;
+}
+
+.one_record_large:hover .count_column{
+  color: black;
+}
 
 .fadeIn {
         /* CSS needed for animation
@@ -1628,4 +1705,60 @@ position: relative;
 .recommand_mobile_app:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.adjust_container {
+  position: relative;
+  top: 7%;
+  width: 26%;
+  left: 37%;
+  height: 36px;
+  background: white;
+  margin-bottom: 6%;
+  border-radius: 8px;
+  box-shadow: 0 0 3px white;
+}
+
+.adjust_minus {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.adjust_minus:hover {
+  cursor: pointer;
+}
+
+.adjust_add {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.adjust_add:hover {
+  cursor: pointer;
+}
+
+.adjust_number {
+  position: absolute;
+  top: 0px;
+  left: 36px;
+  width: calc(100% - 72px);
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  text-align: center;
+  font-family: arial;
+  font-size: 20px;
+  color: black;
+  outline: none;
+  border-style: none;
 }

@@ -91,15 +91,35 @@
             <div class="icon_showup_container">
               <div class="edit_hover_content" ng-show="product.selected==true && product.edit==true">
                 <img class="icon_showup_container_expand" src="img/expand.png" ng-click="full_edit()">
-                <div class="hover_content_title">Inventory Records</div>
+                <div class="hover_content_title_underline">Inventory</div>
+                <div class="one_record" ng-click="full_edit()">
+                  <div class="time_column">Now</div>
+                  <div class="count_column">27</div>
+                </div>
+                <div class="one_record" ng-click="full_edit()">
+                  <div class="time_column">04/14/2015</div>
+                  <div class="count_column">+19 = 27</div>
+                </div>
+                <div class="one_record" ng-click="full_edit()">
+                  <div class="time_column">04/14/2015</div>
+                  <div class="count_column">-2 = 8</div>
+                </div>
+                <div class="one_record" ng-click="full_edit()">
+                  <div class="time_column">04/14/2015</div>
+                  <div class="count_column">+10 = 10</div>
+                </div>
+                <div class="one_record" ng-click="full_edit()">
+                  <div class="time_column">Begin</div>
+                  <div class="count_column">0</div>
+                </div>
               </div> 
               <div class="vendor_hover_content" ng-show="product.selected==true && product.vendor==true">
                 <img class="icon_showup_container_expand" src="img/expand.png" ng-click="full_vendor()">
-                <div class="hover_content_title">Vendor</div>
+                <div class="hover_content_title_underline">Vendor</div>
               </div> 
               <div class="precise_hover_content" ng-show="product.selected==true && product.precise==true">
                 <img class="icon_showup_container_expand" src="img/expand.png" ng-click="full_precise()">
-                <div class="hover_content_title">A Better Vendor ?</div>
+                <div class="hover_content_title_underline">Recommendation</div>
               </div>
             </div>
           </div>
@@ -125,13 +145,39 @@
             <!-- These are icon plug-ins container -->
             <div class="icon_showup_container">
               <div class="edit_hover_content" ng-show="full_screen_edit==true">
-                <div class="hover_content_title">Inventory Records & Adjustment</div>
+                <div class="hover_content_title">Inventory of</div>
+                <div class="hover_content_product_name">Kade Spade New York Cedar Street Handle Handbag</div>
+                <div class="adjust_container">
+                  <img class="adjust_minus" src="img/adjust_minus.png"/>
+                  <input class="adjust_number" value="1"></input>
+                  <img class="adjust_add" src="img/adjust_add.png"/>
+                </div>
+                <div class="one_record_large">
+                  <div class="time_column">Now</div>
+                  <div class="count_column">27</div>
+                </div>
+                <div class="one_record_large">
+                  <div class="time_column">04/14/2015</div>
+                  <div class="count_column">Thomas +19 = 27</div>
+                </div>
+                <div class="one_record_large">
+                  <div class="time_column">04/14/2015</div>
+                  <div class="count_column">Jason -2 = 8</div>
+                </div>
+                <div class="one_record_large">
+                  <div class="time_column">04/14/2015</div>
+                  <div class="count_column">Thomas +10 = 10</div>
+                </div>
+                <div class="one_record_large">
+                  <div class="time_column">Begin</div>
+                  <div class="count_column">0</div>
+                </div>
               </div> 
               <div class="vendor_hover_content" ng-show="full_screen_vendor==true">
-                <div class="hover_content_title">Vendor</div>
+                <div class="hover_content_title_underline">Vendor</div>
               </div> 
               <div class="precise_hover_content" ng-show="full_screen_precise==true">
-                <div class="hover_content_title">A Better Vendor ?</div>
+                <div class="hover_content_title_underline">Recommended Vendors</div>
               </div>
             </div>
           </div>
