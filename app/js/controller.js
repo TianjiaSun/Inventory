@@ -22,6 +22,16 @@ var store = angular.module('store',['ngRoute','webcam'])
     data: $.param({user_app_id:'app_id', service_app_name:'Product', request_string: "get"})
   };
 
+  $scope.addLink = function() {
+    var payload = {
+      op: 'addLink',
+      originAppId: 'Customers'
+    };
+    var targetUrl = (window.location != window.parent.location) ? document.referrer: document.location;
+    parent.postMessage(payload, targetUrl);
+    // console.log(payload);
+  };
+
   // get product info from ASA
   $http(req).success(function(data) {
     $scope.products = angular.fromJson(data.response);

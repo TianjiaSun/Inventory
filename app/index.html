@@ -81,7 +81,8 @@
                 'app_icon_small': SmallCards_flag===true
                 }"
                 src="img/add_link.png"                
-                ng-init="product.add_link=false;"/>
+                ng-init="product.add_link=false;"
+                ng-click="addLink()"/>
             </div>
             <div class="product_name_container_small_cards">
               {{product.name}}
@@ -139,7 +140,7 @@
               <img class="app_icon_large" src="img/history.png" ng-mouseover="switch_to_edit()"/>
               <img class="app_icon_large" src="img/vendor.png" ng-mouseover="switch_to_vendor()"/>
               <img class="app_icon_large" src="img/precise.png" ng-mouseover="switch_to_precise()"/>
-              <img class="app_icon_large" src="img/add_link.png"/>
+              <img class="app_icon_large" src="img/add_link.png" ng-click="addLink()"/>
             </div>
 
             <!-- These are icon plug-ins container -->
